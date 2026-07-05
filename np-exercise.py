@@ -363,8 +363,60 @@ shuffled_times = total_times_5k[indices]
 print(shuffled_runners)
 print(shuffled_times)
 
+print("-" * 20)
+print("part => 3")
+print("-" * 20)
 
 
+time_sorted = np.argsort(total_times_5k)
+
+print(f"total_times_5k:\n {total_times_5k}")
+print(f"time_sorted : {time_sorted}")
+
+# for i in range(len(total_bib_numbers)):
+#     print(f"runner {total_bib_numbers[i]} ==> {total_times_5k[i]}")
+
+for rank,i in enumerate(time_sorted,start=1):
+    print(f"rank {rank} => runner {total_bib_numbers[i]} ==> {total_times_5k[i]}")
+
+
+print("-" * 20)
+print("part => 4")
+print("-" * 20)
+
+# bib = int(input("Enter bib number: "))
+bib = 104
+
+find_index = np.where(total_bib_numbers == bib)[0][0]    #3
+time_of_bib = np.where(time_sorted == find_index)[0][0]     #6
+print(f"rank runner {bib} is ==> {time_of_bib + 1}")
+
+
+print("=" * 50)
+print(f"{" " * 17}Seventh exercise")
+print("=" * 50)
+
+print("-" * 20)
+print("part => 1")
+print("-" * 20)
+
+X_messages = np.array([ 
+    [12, 0, 1], 
+    [45, 5, 8], 
+    [8, 0, 0], 
+    [30, 3, 4] 
+]) 
+w = np.array([0.1, 0.8, 0.5]) 
+b = -2.0
+
+final = X_messages @ w + b
+# final = np.dot(X_messages,w) + b
+
+print(final)
+
+print("-" * 20)
+print("part => 2")
+print("-" * 20)
 
 
 
