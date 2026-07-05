@@ -227,9 +227,9 @@ print("-" * 20)
 print("part => 2")
 print("-" * 20)
 
-# weather_data = weather_data.reshape(-1)
-weather_data = weather_data.flatten()
-print(weather_data.shape)
+# weather_data_flattened = weather_data.reshape(-1)
+weather_data_flattened = weather_data.flatten()
+print(weather_data_flattened.shape)
 
 
 print("-" * 20)
@@ -250,6 +250,28 @@ print(f"arr_flatten is : {arr_flatten} ==> {arr_flatten.shape}")
 ترانهاده فقط جای سطر و ستون را تغییر میدهد اما فلت کردن تمام عناصر 
 آرایه را پشت سرهم قرار میدهد و انها را تک بعدی میکند.
 """
+
+
+print("-" * 20)
+print("part => 4")
+print("-" * 20)
+
+print(f"weather_data shape is ==> {weather_data.shape}")
+day3 = np.random.randn(8, 4).reshape(1,8,4)
+print(f"day3 shape is ==> {day3.shape}")
+
+weather_data_3day = np.vstack((weather_data,day3))
+# weather_data_3day = np.concatenate((weather_data,day3),axis=0)
+
+print(f"weather_data_3day ==> {weather_data_3day.shape}")
+
+
+
+
+
+
+
+
 
 
 
