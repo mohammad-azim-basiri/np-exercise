@@ -194,10 +194,14 @@ biggest_grade = np.argmax(mean_of_final_scores_of_scheme)
 print(f"good scheme is ==> {schemes[biggest_grade]}")
 
 print("-" * 20)
-print("part => 4")
+print("part => 5")
 print("-" * 20)
 
+x = 0.2
+scheme_D = np.array([x, 1-3*x, 2*x])
 
+new_weight_matrix = np.hstack((scheme_A, scheme_B, scheme_C, scheme_D)).reshape(4,3)
+print(f"new_weight_matrix is :\n{new_weight_matrix}")
 
 
 
