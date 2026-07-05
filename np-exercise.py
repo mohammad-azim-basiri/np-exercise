@@ -76,8 +76,90 @@ print(f"Biggest difference session whith others ==> {member_names[np.argmax(z_sc
 
 
 print("=" * 50)
-print(f"{" " * 17}second exercise")
+print(f"{" " * 17}Second exercise")
 print("=" * 50)
+
+recipes = np.array([ 
+    [15, 350, 2, 5], 
+    [45, 600, 7, 10], 
+    [10, 200, 0, 3], 
+    [30, 450, 5, 7], 
+    [60, 800, 8, 12] 
+]) 
+recipe_names = ["Salad", "Curry", "Toast", "Pasta", "Stew"] 
+
+print("-" * 20)
+print("part => 1")
+print("-" * 20)
+
+# mean = np.mean(recipes, axis=0)
+max_m = np.max(recipes, axis=0)
+min_m = np.min(recipes, axis=0)
+scaled_recipes = ((recipes - min_m) / (max_m - min_m))
+print(f"scaled_recipes is:\n {scaled_recipes}")
+
+print("-" * 20)
+print("part => 2")
+print("-" * 20)
+
+users = np.array([ 
+    [10, 250, 1, 4], 
+    [50, 700, 8, 11], 
+    [25, 400, 4, 6] 
+]) 
+
+scaled_users = ((users - min_m) / (max_m - min_m))
+print(f"scaled_users is:\n{scaled_users}")
+
+print("-" * 20)
+print("part => 3")
+print("-" * 20)
+
+scaled_recipes_reshape = scaled_recipes.reshape(1,5,4)
+scaled_users_reshape = scaled_users.reshape(3,1,4)
+
+diff = scaled_users_reshape - scaled_recipes_reshape
+euclidean = np.linalg.norm(diff, axis= 2)
+print(f"euclidean distance is:\n {euclidean}")
+
+print("-" * 20)
+print("part => 4")
+print("-" * 20)
+
+nearest_recipes = np.argmin(euclidean,axis=1)
+print(f"nearest_recipes index list is ==> {nearest_recipes}")
+
+for i in range(len(users)):
+    print(f"user {i + 1} ==> {recipe_names[nearest_recipes[i]]}")
+
+print("-" * 20)
+print("part => 5")
+print("-" * 20)
+
+sort_list_recipes = np.argsort(euclidean)
+ 
+print(f"sort_list_recipes:\n {sort_list_recipes}")
+
+for i in range(len(users)):
+    print(f"\nuser {i + 1} ==>")
+    for j in range(5):
+        print(recipe_names[sort_list_recipes[i,j]])
+
+print("=" * 50)
+print(f"{" " * 17}Third exercise")
+print("=" * 50)
+
+scores = np.array([ 
+    [18, 15, 20], 
+    [12, 14, 16], 
+    [20, 19, 18], 
+    [10, 8, 15] 
+])
+
+
+
+
+
 
 
 
