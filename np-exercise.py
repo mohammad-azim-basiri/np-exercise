@@ -14,9 +14,9 @@ gym_data = np.array([
 
 member_names = np.array(["Ali", "Sara", "Reza", "Neda", "Hassan", "Maryam"])
 
-print("-" * 10)
+print("-" * 20)
 print("part => 1")
-print("-" * 10)
+print("-" * 20)
 
 heights = gym_data[:,2]
 print(f"heights list is : {heights}")
@@ -37,16 +37,16 @@ for i in range(len(gym_data)):
         gym_data[i,3] = avg_sessions
 # print(gym_data)
 
-print("-" * 10)
+print("-" * 20)
 print("part => 2")
-print("-" * 10)
+print("-" * 20)
 
 new_gym_data = gym_data[:,1:]
 print(f"new_gym_data :\n {new_gym_data}")
 
-print("-" * 10)
+print("-" * 20)
 print("part => 3")
-print("-" * 10)
+print("-" * 20)
 
 bmi = np.round(new_gym_data[:,0] / ((new_gym_data[:,1] / 100) * (new_gym_data[:,1] / 100)),2)
 
@@ -54,16 +54,16 @@ print(f"bmi list is:\n {bmi}")
 fitness_score = ((2 * new_gym_data[:,2]) + (1 * bmi))
 print(f"fitness_score list is:\n {fitness_score}") 
 
-print("-" * 10)
+print("-" * 20)
 print("part => 4")
-print("-" * 10)
+print("-" * 20)
 
 biggest_fitness_score_name = member_names[np.argmax(fitness_score)]
 print(f"biggest_fitness_score_name is: \n{biggest_fitness_score_name}")
 
-print("-" * 10)
+print("-" * 20)
 print("part => 5")
-print("-" * 10)
+print("-" * 20)
 
 
 mean_of_sessions = np.mean(new_gym_data[:,2])
@@ -75,7 +75,9 @@ print(f"z_score list is:\n{z_score}\n")
 print(f"Biggest difference session whith others ==> {member_names[np.argmax(z_score)]}")
 
 
-
+print("=" * 50)
+print(f"{" " * 17}second exercise")
+print("=" * 50)
 
 
 
