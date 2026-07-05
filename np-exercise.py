@@ -205,24 +205,51 @@ print(f"new_weight_matrix is :\n{new_weight_matrix}")
 
 
 
+print("=" * 50)
+print(f"{" " * 17}Fourth exercise")
+print("=" * 50)
+
+weather_data = np.random.randn(2, 8, 4) * 5 + 20 
+
+print("-" * 20)
+print("part => 1")
+print("-" * 20)
+
+def analyze_day(day):
+    print(day)
+
+day2 = weather_data[1].reshape(4,8)
+print(f"day2.shape: {day2.shape}")
+
+analyze_day(day2)
+
+print("-" * 20)
+print("part => 2")
+print("-" * 20)
+
+# weather_data = weather_data.reshape(-1)
+weather_data = weather_data.flatten()
+print(weather_data.shape)
 
 
+print("-" * 20)
+print("part => 3")
+print("-" * 20)
 
 
+arr = np.array([[1,2],
+                [3,4]])
 
+arr_transpose = arr.T
+print(f"arr_transpose:\n {arr_transpose} ==> {arr_transpose.shape}")
 
+arr_flatten = arr.flatten()
+print(f"arr_flatten is : {arr_flatten} ==> {arr_flatten.shape}")
 
-
-
-
-
-
-
-
-
-
-
-
+"""
+ترانهاده فقط جای سطر و ستون را تغییر میدهد اما فلت کردن تمام عناصر 
+آرایه را پشت سرهم قرار میدهد و انها را تک بعدی میکند.
+"""
 
 
 
