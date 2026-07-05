@@ -292,10 +292,20 @@ print("-" * 20)
 print("part => 2")
 print("-" * 20)
 
-
 model_out = np.array([[[0.9]]])
 
+model_out1 = model_out[0,0,0]
+print(model_out1)
 
+# یک آرایه نامپای که فقط یک عنصر دارد را به : item() 
+# یک اسکالر (عدد معمولی پایتون) تبدیل می‌کند
+
+model_out2 = model_out.item()
+print(model_out2)
+
+print("-" * 20)
+print("part => 3")
+print("-" * 20)
 
 
 
