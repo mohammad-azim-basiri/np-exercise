@@ -156,16 +156,27 @@ scores = np.array([
     [10, 8, 15] 
 ])
 
+scheme_A = np.array([0.5, 0.3, 0.2]) 
+scheme_B = np.array([0.2, 0.3, 0.5]) 
+scheme_C = np.array([0.1, 0.2, 0.7])
 
+print("-" * 20)
+print("part => 1")
+print("-" * 20)
 
+weight_matrix = np.hstack((scheme_A, scheme_B, scheme_C)).reshape(3,3)
+print(f"weight_matrix is :\n{weight_matrix}")
 
+print("-" * 20)
+print("part => 2")
+print("-" * 20)
 
+final_scores = scores @ weight_matrix.T 
+print(f"final_scores is :\n{final_scores}")
 
-
-
-
-
-
+print("-" * 20)
+print("part => 3")
+print("-" * 20)
 
 
 
