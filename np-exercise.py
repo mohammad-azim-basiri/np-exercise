@@ -178,7 +178,8 @@ print("-" * 20)
 print("part => 3")
 print("-" * 20)
 
-
+good_scheme = np.argmax(final_scores,axis=1)
+print(good_scheme)
 
 
 
