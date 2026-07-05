@@ -289,9 +289,11 @@ print(f"second way ==> {importance2.shape}")
 
 
 print("-" * 20)
-print("part => 1")
+print("part => 2")
 print("-" * 20)
 
+
+model_out = np.array([[[0.9]]])
 
 
 
