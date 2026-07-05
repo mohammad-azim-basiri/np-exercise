@@ -64,3 +64,26 @@ print(f"biggest_fitness_score_name is: \n{biggest_fitness_score_name}")
 print("-" * 10)
 print("part => 5")
 print("-" * 10)
+
+
+mean_of_sessions = np.mean(new_gym_data[:,2])
+print(f"mean_of_sessions is ==> {mean_of_sessions}")
+members_std = np.std(new_gym_data[:,2])
+print(f"members_std is ==> {members_std}\n")
+z_score = np.abs((new_gym_data[:,2] - mean_of_sessions) / members_std)
+print(f"z_score list is:\n{z_score}\n")
+print(f"Biggest difference session whith others ==> {member_names[np.argmax(z_score)]}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
