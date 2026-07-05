@@ -412,13 +412,39 @@ b = -2.0
 final = X_messages @ w + b
 # final = np.dot(X_messages,w) + b
 
-print(final)
+print(f"Raw output for part 1 ==> {final}")
 
 print("-" * 20)
 print("part => 2")
 print("-" * 20)
 
+# final = X_messages @ w + b
+relu_final = np.maximum(0,final)
+
+print(f"Output with RELU activation function ==> {relu_final}")
+
+print("-" * 20)
+print("part => 3")
+print("-" * 20)
+
+# === first way ===
+
+threshold = 5
+for index,i in enumerate(relu_final,start=1):
+    if i <= threshold:
+        print(f"message {index} ==> Calm Message")
+    else:
+        print(f"message {index} ==> Energetic message")
+
+
+# === second way ===
+
+# for index,i in enumerate(relu_final,start=1):
+#     if i <= 0 :
+#         print(f"message {index} ==> Calm Message")
+#     else:
+#         print(f"message {index} ==> Energetic message")
 
 
 
-
+print("\n" + "🎈" * 50 + "\n" + "🎈" * 50 )
