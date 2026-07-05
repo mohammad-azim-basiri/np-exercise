@@ -182,4 +182,43 @@ good_scheme = np.argmax(final_scores,axis=1)
 print(good_scheme)
 
 
+print("-" * 20)
+print("part => 4")
+print("-" * 20)
+
+mean_of_final_scores_of_scheme = np.mean(final_scores,axis=0)
+print(mean_of_final_scores_of_scheme)
+
+schemes = ["scheme_A","scheme_B","scheme_C"]
+biggest_grade = np.argmax(mean_of_final_scores_of_scheme)
+print(f"good scheme is ==> {schemes[biggest_grade]}")
+
+print("-" * 20)
+print("part => 4")
+print("-" * 20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
