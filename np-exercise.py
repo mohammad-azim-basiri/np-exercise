@@ -48,3 +48,19 @@ print("-" * 10)
 print("part => 3")
 print("-" * 10)
 
+bmi = np.round(new_gym_data[:,0] / ((new_gym_data[:,1] / 100) * (new_gym_data[:,1] / 100)),2)
+
+print(f"bmi list is:\n {bmi}")
+fitness_score = ((2 * new_gym_data[:,2]) + (1 * bmi))
+print(f"fitness_score list is:\n {fitness_score}") 
+
+print("-" * 10)
+print("part => 4")
+print("-" * 10)
+
+biggest_fitness_score_name = member_names[np.argmax(fitness_score)]
+print(f"biggest_fitness_score_name is: \n{biggest_fitness_score_name}")
+
+print("-" * 10)
+print("part => 5")
+print("-" * 10)
