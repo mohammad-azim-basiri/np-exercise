@@ -347,7 +347,7 @@ bib_numbers_2 = np.array([107, 108])
 times_5k_2 = np.array([20.5, 27.9])
 
 total_bib_numbers = np.concatenate((bib_numbers,bib_numbers_2))
-print(f"total_bib:\n {total_bib_numbers}")
+print(f"total_bib_numbers:\n {total_bib_numbers}")
 
 total_times_5k = np.concatenate((times_5k,times_5k_2))
 print(f"total_times_5k:\n {total_times_5k}")
@@ -356,9 +356,12 @@ print("-" * 20)
 print("part => 2")
 print("-" * 20)
 
+indices = np.random.permutation(len(total_bib_numbers))
 
-
-
+shuffled_runners = total_bib_numbers[indices]
+shuffled_times = total_times_5k[indices]
+print(shuffled_runners)
+print(shuffled_times)
 
 
 
