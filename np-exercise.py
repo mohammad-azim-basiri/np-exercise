@@ -266,9 +266,31 @@ weather_data_3day = np.vstack((weather_data,day3))
 print(f"weather_data_3day ==> {weather_data_3day.shape}")
 
 
+print("=" * 50)
+print(f"{" " * 17}Fifth exercise")
+print("=" * 50)
 
 
+print("-" * 20)
+print("part => 1")
+print("-" * 20)
 
+importance = np.array([3, 8, 1, 9, 4, 7])
+
+print(f"importance shape ==> {importance.shape}")
+
+importance1 = importance.reshape(6,1)
+print(f"first way ==> {importance1.shape}")
+# print(importance1)
+
+importance2 = importance[:,np.newaxis]
+print(f"second way ==> {importance2.shape}")
+# print(importance2)
+
+
+print("-" * 20)
+print("part => 1")
+print("-" * 20)
 
 
 
