@@ -307,5 +307,52 @@ print("-" * 20)
 print("part => 3")
 print("-" * 20)
 
+notes = np.array([5, 10, 15, 20, 25]) 
+pinned = notes[1:3] 
+pinned[0] = 999 
+print(notes)    # [5, 999, 15, 20, 25]
+
+"""
+اسلایس کپی نیست بلکه نمایشه در نتیجه آرایه اولیه هم تغییر میکنه.
+"""
+notes = np.array([5, 10, 15, 20, 25]) 
+pinned = notes[1:3].copy() 
+pinned[0] = 999 
+print(notes)    #[5, 10, 15, 20, 25]
+
+
+
+print("-" * 20)
+print("part => 4")
+print("-" * 20)
+
+notes = np.array([5, 10, 15, 20, 25]) 
+pinned = notes[1:3] 
+pinned[0] = 999 
+print(notes)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
