@@ -332,18 +332,29 @@ pinned[0] = 999
 print(notes)
 
 
+print("=" * 50)
+print(f"{" " * 17}Sixth exercise")
+print("=" * 50)
 
+print("-" * 20)
+print("part => 1")
+print("-" * 20)
 
+bib_numbers = np.array([101, 102, 103, 104, 105, 106]) 
+times_5k = np.array([22.3, 25.1, 21.8, 26.4, 23.0, 24.7])
 
+bib_numbers_2 = np.array([107, 108]) 
+times_5k_2 = np.array([20.5, 27.9])
 
+total_bib_numbers = np.concatenate((bib_numbers,bib_numbers_2))
+print(f"total_bib:\n {total_bib_numbers}")
 
+total_times_5k = np.concatenate((times_5k,times_5k_2))
+print(f"total_times_5k:\n {total_times_5k}")
 
-
-
-
-
-
-
+print("-" * 20)
+print("part => 2")
+print("-" * 20)
 
 
 
